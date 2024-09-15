@@ -48,10 +48,14 @@ def main():
         game.display()
 
         if game.check_win(current_payer):
-            print(f'Won {current_payer}')
+            result = f'Won {current_payer}'
+            print(result)
+            game.save_result(result)
             running = False
         elif game.is_board_full():
-            print('A draw!')
+            result = 'A draw!'
+            print(result)
+            game.save_result(result)
             running = False
 
         current_payer = 'O' if current_payer == 'X' else 'X'

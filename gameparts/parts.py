@@ -23,7 +23,7 @@ class Board:
             for j in range(self.field_size):
                 if self.board[i][j] == ' ':
                     return False
-        return True        
+        return True
 
     def check_win(self, player):
         for i in range(3):
@@ -38,6 +38,11 @@ class Board:
             return True
 
         return False
+
+    def save_result(self, result):
+        file = open('results.txt', 'a')
+        file.write(result + '\n')
+        file.close()
 
     def __str__(self):
         return (
