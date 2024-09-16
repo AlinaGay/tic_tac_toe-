@@ -39,10 +39,6 @@ class Board:
 
         return False
 
-    def save_result(self, result):
-        with open('results.txt', 'a') as file:
-            file.write(result + '\n')
-
     def __str__(self):
         return (
             'Size of the game field object'
